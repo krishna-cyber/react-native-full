@@ -9,6 +9,7 @@ const Index = () => {
     <Text className=' text-red-500 font-PoppinsBold text-lg font-medium border-blue-500 border-dashed border-4 mt-4 p-4 w-fit '>Index</Text>
     <StatusBar style="auto" />
     <Link href="/profile" style={{color:"blue",backgroundColor:"red"}} className=' font-PoppinsBlack' >Go to profile</Link>
+    <Link href="/(tabs)/home" style={{color:"blue",backgroundColor:"red"}} className=' font-PoppinsBlack' >Go to Home</Link>
   </View>
   )
 }
