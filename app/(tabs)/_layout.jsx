@@ -1,6 +1,14 @@
 import { View, Text } from "react-native";
 import { Tabs, Redirect } from "expo-router";
-import { BookmarkIcon, Camera, CameraIcon, House, HouseIcon, LucideCreativeCommons, User } from "lucide-react-native";
+import {
+  BookmarkIcon,
+  Camera,
+  CameraIcon,
+  House,
+  HouseIcon,
+  LucideCreativeCommons,
+  User,
+} from "lucide-react-native";
 import Home from "./home";
 import Bookmark from "./bookmark";
 import Profile from "../profile";
@@ -11,9 +19,17 @@ const TabsLayout = () => {
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
+          tabBarActiveTintColor: "#FFA001",
+          tabBarInactiveTintColor: "#CDCDE0",
+          tabBarStyle:{
+            backgroundColor: "#161622",
+            borderTopWidth:1,
+            borderTopColor:"#EE4B2B",
+            height: 60,
+          }
         }}
       >
-         <Tabs.Screen
+        <Tabs.Screen
           name="home"
           options={{
             title: "Home",
@@ -25,8 +41,13 @@ const TabsLayout = () => {
                     <House size={19} color={color} />
                     <Text
                       className={`
-                        ${focused ? "text-blue-500" : "text-gray-500"} text-sm
+                        ${
+                          focused
+                            ? "text-blue-500 font-PoppinsMedium"
+                            : "text-gray-500"
+                        } text-sm
                         `}
+                        style={{color:color}}
                     >
                       Home
                     </Text>
@@ -48,8 +69,13 @@ const TabsLayout = () => {
                     <BookmarkIcon size={19} color={color} />
                     <Text
                       className={`
-                        ${focused ? "text-blue-500" : "text-gray-500"} text-sm
+                        ${
+                          focused
+                            ? "text-blue-500 font-PoppinsMedium"
+                            : "text-gray-500"
+                        } text-sm
                         `}
+                        style={{color:color}}
                     >
                       Bookmark
                     </Text>
@@ -59,7 +85,7 @@ const TabsLayout = () => {
             },
           }}
         />
-      <Tabs.Screen
+        <Tabs.Screen
           name="create"
           options={{
             title: "Create",
@@ -71,8 +97,13 @@ const TabsLayout = () => {
                     <CameraIcon size={20} color={color} />
                     <Text
                       className={`
-                        ${focused ? "text-blue-500" : "text-gray-500"} text-sm
+                        ${
+                          focused
+                            ? "text-blue-500 font-PoppinsMedium"
+                            : "text-gray-500"
+                        } text-sm
                         `}
+                        style={{color:color}}
                     >
                       Create
                     </Text>
@@ -94,8 +125,13 @@ const TabsLayout = () => {
                     <User color={color} />
                     <Text
                       className={`
-                        ${focused ? "text-blue-500" : "text-gray-500"} text-sm
+                        ${
+                          focused
+                            ? "text-blue-500 font-PoppinsMedium"
+                            : "text-gray-500"
+                        } text-sm
                         `}
+                        style={{color:color}}
                     >
                       Profile
                     </Text>
