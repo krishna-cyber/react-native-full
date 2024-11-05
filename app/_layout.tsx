@@ -29,8 +29,9 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) null; //if fonts not loaded and no error return null
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
+    <Stack >
+      <Stack.Screen name="index" options={{headerShown:false}} />
+      <Stack.Screen name="home" options={{headerShown:true}} />
     </Stack>
   );
 };

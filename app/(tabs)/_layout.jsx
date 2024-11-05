@@ -9,10 +9,7 @@ import {
   LucideCreativeCommons,
   User,
 } from "lucide-react-native";
-import Home from "./home";
-import Bookmark from "./bookmark";
-import Profile from "../profile";
-import { ReactElement, ReactNode } from "react";
+
 const TabsLayout = () => {
   return (
     <>
@@ -21,12 +18,12 @@ const TabsLayout = () => {
           tabBarShowLabel: false,
           tabBarActiveTintColor: "#FFA001",
           tabBarInactiveTintColor: "#CDCDE0",
-          tabBarStyle:{
+          tabBarStyle: {
             backgroundColor: "#161622",
-            borderTopWidth:1,
-            borderTopColor:"#EE4B2B",
+            borderTopWidth: 1,
+            borderTopColor: "#EE4B2B",
             height: 60,
-          }
+          },
         }}
       >
         <Tabs.Screen
@@ -47,7 +44,7 @@ const TabsLayout = () => {
                             : "text-gray-500"
                         } text-sm
                         `}
-                        style={{color:color}}
+                      style={{ color: color }}
                     >
                       Home
                     </Text>
@@ -75,7 +72,7 @@ const TabsLayout = () => {
                             : "text-gray-500"
                         } text-sm
                         `}
-                        style={{color:color}}
+                      style={{ color: color }}
                     >
                       Bookmark
                     </Text>
@@ -103,7 +100,7 @@ const TabsLayout = () => {
                             : "text-gray-500"
                         } text-sm
                         `}
-                        style={{color:color}}
+                      style={{ color: color }}
                     >
                       Create
                     </Text>
@@ -131,7 +128,7 @@ const TabsLayout = () => {
                             : "text-gray-500"
                         } text-sm
                         `}
-                        style={{color:color}}
+                      style={{ color: color }}
                     >
                       Profile
                     </Text>
