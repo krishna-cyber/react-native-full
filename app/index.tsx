@@ -1,14 +1,15 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CustomButton from "@/components/CustomButton";
 
 const Index = () => {
   return (
     <SafeAreaView className="h-full bg-primary">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
-        <View className=" w-full h-[85vh] px-4 justify-center  items-center">
+        <View className=" w-full h-[90vh] px-4 justify-center items-center">
           <Image
             source={require("../assets/images/logo.png")}
             className=" max-w-36 max-h-36"
@@ -34,6 +35,13 @@ const Index = () => {
               limitless possibilities with Aora.
             </Text>
           </View>
+        <CustomButton
+          title="Continue with Email"
+          containerStyle="w-11/12 mx-auto mt-5"
+          textStyles="text-xl"
+          handlePress={() => {router.push("/(auth)/sign-in")}}
+          isLoading={false}
+        />
         </View>
       </ScrollView>
       <StatusBar backgroundColor="#010515" translucent={true} style="light" />
