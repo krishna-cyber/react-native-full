@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "@/components/CustomButton";
+import { Images } from "@/constants/Colors";
 
 const Index = () => {
   return (
@@ -11,12 +12,12 @@ const Index = () => {
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className=" w-full h-[90vh] px-4 justify-center items-center">
           <Image
-            source={require("../assets/images/logo.png")}
+            source={Images.logo}
             className=" max-w-36 max-h-36"
             resizeMode="contain"
           />
           <Image
-            source={require("../assets/images/cards.png")}
+            source={Images.cards}
             className=" max-w-[80%] max-h-[30%]"
             resizeMode="contain"
           />
@@ -26,7 +27,7 @@ const Index = () => {
               <Text className=" text-secondary">Aora</Text>
             </Text>
             <Image
-              source={require("../assets/images/path.png")}
+              source={Images.path}
               className="absolute h-4 w-20 left-[70%] top-[62px]"
               resizeMode="contain"
             />
@@ -38,7 +39,7 @@ const Index = () => {
           <CustomButton
             title="Continue with Email"
             containerStyle="w-11/12 mx-auto mt-5"
-            textStyles="text-xl"
+            textStyles="text-xl text-primary"
             handlePress={() => {
               router.push("/(auth)/sign-in");
             }}
