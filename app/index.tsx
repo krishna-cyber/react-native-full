@@ -35,16 +35,17 @@ const Index = () => {
               limitless possibilities with Aora.
             </Text>
           </View>
-        <CustomButton
-          title="Continue with Email"
-          containerStyle="w-11/12 mx-auto mt-5"
-          textStyles="text-xl"
-          handlePress={() => {router.push("/(auth)/sign-in")}}
-          isLoading={false}
-        />
+          <CustomButton
+            title="Continue with Email"
+            containerStyle="w-11/12 mx-auto mt-5"
+            textStyles="text-xl"
+            handlePress={() => {
+              router.push("/(auth)/sign-in");
+            }}
+            isLoading={false}
+          />
         </View>
       </ScrollView>
-      <StatusBar backgroundColor="#010515" translucent={true} style="light" />
     </SafeAreaView>
   );
 };

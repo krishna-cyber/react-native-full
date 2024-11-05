@@ -3,6 +3,7 @@ import { Slot, SplashScreen, Stack } from "expo-router";
 import "../global.css";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
+import { StatusBar } from "expo-status-bar";
 
 SplashScreen.preventAutoHideAsync(); // prevent auto hide splash screen before fonts loaded
 
@@ -29,10 +30,13 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) null; //if fonts not loaded and no error return null
 
   return (
-    <Stack >
-      <Stack.Screen name="index" options={{headerShown:false}} />
-      <Stack.Screen name="home" options={{headerShown:true}} />
-    </Stack>
+    <>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="home" />
+      </Stack>
+      <StatusBar backgroundColor="#4D5963" translucent={true} style="light" />
+    </>
   );
 };
 
