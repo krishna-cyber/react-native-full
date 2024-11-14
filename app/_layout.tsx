@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text } from "react-native";
 import { Slot, SplashScreen, Stack } from "expo-router";
 import "../global.css";
@@ -33,7 +34,7 @@ const RootLayout = () => {
     <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="home" />
+        <Stack.Screen name="(auth)" />
       </Stack>
       <StatusBar backgroundColor="#4D5963" translucent={true} style="light" />
     </>
